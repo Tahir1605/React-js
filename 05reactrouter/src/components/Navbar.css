@@ -1,0 +1,28 @@
+.navbar{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #34495e;
+    border-radius: 5px;
+}
+.navbar ul{
+    display: flex;
+    padding: 20px;
+}
+.navbar ul li {
+    list-style: none;
+    color: aliceblue;
+    padding: 0px 10px;
+    
+
+}
+.active-link{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 5px;
+}
+#link-text{
+    text-decoration: none;
+    font-size: 18px;
+    color: aliceblue;
+}
