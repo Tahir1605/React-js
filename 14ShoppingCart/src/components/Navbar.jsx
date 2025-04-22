@@ -11,7 +11,7 @@ function Navbar() {
     setIsDropdownVisible(!isDropdownVisible);
   };
 
-    const { state: { cart }, dispatch } = UseCartContext()
+    const { state: { cart }, dispatch,productDispatch} = UseCartContext()
   
 
   return (
@@ -24,6 +24,12 @@ function Navbar() {
             type="text"
             className='outline-none rounded-sm px-3 py-1 w-80'
             placeholder='Search Products'
+            onChange={(e)=>{
+              productDispatch({
+                type:"FILTER_BY_SEARCH",
+                payload:e.target.value,
+              })
+            }}
           />
         </div>
 
