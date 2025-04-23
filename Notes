@@ -1,0 +1,37 @@
+// import { useEffect, useState } from "react";
+
+// function App() {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     fetch('https://fakestoreapi.in/api/products')
+//       .then(response => response.json())
+//       .then(data => {
+//         setData(data.products); 
+//         console.log(data.products);
+        
+//       });
+//   }, []);
+
+//   return (
+//     <div className="bg-slate-900 min-h-screen text-white p-6">
+//       <h1 className="text-3xl font-bold mb-6 text-center">Our Products</h1>
+//       <div className="grid grid-cols-3 gap-10 mx-24">
+//         {data.map((prod) => (
+//           <div key={prod.id} className="bg-slate-800 rounded-2xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+//             <img
+//               src={prod.image}
+//               alt={prod.brand}
+//               className="w-40 h-40 object-contain mb-4 rounded-md"
+//             />
+//             <p className="text-xl text-gray-300 text-center mb-2">{prod.brand}</p>
+//             <p className="text-xl font-bold text-green-400">${prod.price}</p>
+//             <button className="bg-blue-500 rounded-md px-5 py-2 my-5 hover:bg-blue-700 transition-all">Add to Cart</button>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
