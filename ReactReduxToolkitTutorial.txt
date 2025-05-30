@@ -36,7 +36,7 @@ export const store = configureStore({
    
    src
     |
-    |---feature
+    |---features
            |
            |---counter
                   |
