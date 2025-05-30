@@ -1,0 +1,58 @@
+React Context Api Tutorial
+
+1.Create Context and export
+
+   src
+    |
+    |---context
+          |
+          |---Counter.js
+
+in Counter.js
+
+import { useContext,createContext } from "react";
+
+
+
+export const CounterContext = createContext({
+    counter : 0,
+    increment : () => {},
+    decrement : () => {},
+})
+
+export const CounterProvider = CounterContext.Provider //Context Provider
+
+export default function useCounter(){
+    return useContext(CounterContext)
+}
+
+2. Use Context Api in App.jsx
+
+
+import { useState } from 'react'
+import './App.css'
+import { CounterProvider } from './context/Counter';
+
+function App() {
+  const [counter,setCounter] = useState(0);
+  const increment = () => {
+    setCounter(counter+1);
+  }
+  const decrement = () => {
+    setCounter(counter-1);
+  }
+  return (
+    <CounterProvider value={{counter,increment,decrement}}>
+      <div>
+        <h1>Context Api Tutorial</h1>
+         <button onClick={increment}>increment</button>
+         <h2>Counter : {counter}</h2>
+         <button onClick={decrement}>decrement</button>
+      </div>
+    </CounterProvider>
+  )
+}
+
+export default App
+
+
