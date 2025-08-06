@@ -5,11 +5,17 @@ const App = () => {
   const [todo, setTodo] = useState([]);
 
   
-
   useEffect(() => {
       const gettodos = JSON.parse(localStorage.getItem("todos"))
       if(gettodos) setTodo(gettodos)
   },[])
+
+  // useEffect(() => {
+  //   const gettodos = localStorage.getItem("todos")
+  //   if(gettodos!==null){
+  //     setTodo(JSON.parse(gettodos))
+  //   }
+  // },[])
 
   useEffect(() => {
       localStorage.setItem("todos",JSON.stringify(todo))
